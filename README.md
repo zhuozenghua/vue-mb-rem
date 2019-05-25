@@ -5,7 +5,7 @@
 这篇文章涉及的[代码](https://github.com/zhuozenghua/vue-mb-rem)
 
 #### 关于lib-flexible可伸缩布局方案
-flexible方案是手淘经过多年的摸索和实战，总结出的一套移动端适配方案。早期的flexible的方案（lib-flexible）通过动态修改viewport的方式来设置视口，有点过于激进。出现了很多问题：`` 安卓端1像素问题 `` 、`` 不能与响应式兼容 `` 、`` 与ui框架搭配出现长度问题 `` 等等。最新版(amfe-lexible)已经不再修改 viewport ，而是统一使用理想视口。
+flexible方案是手淘经过多年的摸索和实战，总结出的一套移动端适配方案。早期的flexible的方案（lib-flexible）通过动态修改viewport的方式来设置视口，出现了很多问题：`` 安卓端1像素问题 `` 、`` 不能与响应式兼容 `` 、`` 与ui框架搭配出现长度问题 `` 等等。最新版(amfe-lexible)已经不再修改 viewport ，而是统一使用理想视口。
 
 ***
 
@@ -40,14 +40,18 @@ import 'amfe-flexible'
 
 目前主要有两种方式来解决这个问题
 （a）[CSSREM](https://github.com/flashlizi/cssrem)是一个CSS的px值转rem值的Sublime Text3自动完成插件。
+
 （b）除了使用编辑器的插件之外，还可以使用CSS的处理器来帮助大家处理。比如说Sass、LESS以及PostCSS这样的处理器。
 这里主要讲下使用PostCSS方式解决这个问题，这也是我常用的方式
 
 >  如何在vue-cli中使用PostCSS方式解决这个问题?
 
 这里介绍三款将px转换为rem插件
+
 postcss-plugin-px2rem官方文档：[https://www.npmjs.com/package/postcss-plugin-px2rem](https://www.npmjs.com/package/postcss-plugin-px2rem)
+
 postcss-pxtorem官方文档：[https://www.npmjs.com/package/postcss-pxtorem](https://www.npmjs.com/package/postcss-pxtorem)
+
 postcss-px2rem官方文档：[https://www.npmjs.com/package/postcss-px2rem](https://www.npmjs.com/package/postcss-px2rem)
 
 这三种插件postcss-pxtorem和 postcss-px2rem 类似，postcss-plugin-px2rem 这个插件 配置选项上有  exclude 属性，它可以配置 是否对 某个文件夹下的所有css文件不进行从px到rem的转换。我们可以利用这个特性，排除掉我们不要转换处理的文件夹。
