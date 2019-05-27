@@ -12,7 +12,7 @@ module.exports = {
     // },
     "postcss-plugin-px2rem":{
         "rootValue": 75,
-        "propBlackList":['font-size'],
+        "propBlackList":['font','font-size'],
          exclude: /(node_module)/, 
     }
   }

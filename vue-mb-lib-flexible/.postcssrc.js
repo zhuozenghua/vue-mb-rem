@@ -8,7 +8,7 @@ module.exports = {
     "autoprefixer": {},
     "postcss-pxtorem": {
        "rootValue": 75,
-       "propList": ['*','!font-size']
+       "propList": ['*','!font','!font-size']
     },
   }
 }
